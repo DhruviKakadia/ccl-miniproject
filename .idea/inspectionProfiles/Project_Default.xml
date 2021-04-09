@@ -1,0 +1,41 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E262" />
+          <option value="E303" />
+          <option value="E741" />
+          <option value="E302" />
+          <option value="E265" />
+          <option value="E225" />
+          <option value="E501" />
+          <option value="E305" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingNamesInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="object.__getitem__" />
+          <option value="exp5._name_" />
+          <option value="main.__main__" />
+          <option value="mysite.polls.views.ACCESS_TOKEN" />
+          <option value="mysite1.urls.views" />
+          <option value="populateInstagramFeed.outputHTML" />
+          <option value="populateInstagramFeed.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

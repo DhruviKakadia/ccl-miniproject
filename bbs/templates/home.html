@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="./static/css/newstyle.css" />
+    <link rel="stylesheet" href="./static/css/progress.css" />
+    <link rel="stylesheet" href="./static/css/vidstyle.css" />
+    <link
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"
+  />
+
+    <title>Bus Booking System-Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('main.landing')}}">BBS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            {% if current_user.is_authenticated%}
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{{ url_for('users.logout')}}"
+                >Logout</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('main.trips')}}">Trips</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{{ url_for('users.login')}}"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('users.register')}}"
+                >Register</a
+              >
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <header>
+      <div class="header-container">
+        <h1 class="hero-text">Bus Booking System</h1>
+        <p class="p-hero">Hustle Free Online Ticketing System</p>
+        <a href="{{ url_for('users.login')}}" class="btn btn-primary signin-cta">Sign In</a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-center">
+          <h2 class="mt-5 h-text">Fast And Reliable</h2>
+          <p class="p-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            corrupti minus ducimus minima odio reiciendis ea maiores. Alias,
+            illum accusantium?
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="/static/img/b.jpg" alt="" class="content-image" />
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6 text-center mt-5">
+          <img src="/static/img/c.jpg" alt="" class="content-image" />
+        </div>
+        <div class="col-lg-6 text-center mt-5">
+          <h2 class="mt-5 h-text">Security is Secured</h2>
+          <p class="p-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
+            laborum! Eligendi, nam dolorem quidem quaerat assumenda ex illum
+            aliquam non!
+          </p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-5 mb-3 h-text">Check Below How this Works</h2>
+          <video
+              src="./static/img/vid.mp4"
+              id="video"
+              class="screen"
+              poster="./static/img/poster.png"
+            ></video>
+            <div class="controls">
+              <button class="btn btn-sm" id="play">
+                <i class="fa fa-play fa-2x"></i>
+              </button>
+
+              <button class="btn btn-sm" id="stop">
+                <i class="fa fa-stop fa-2x"></i>
+              </button>
+              <input
+                type="range"
+                id="progress"
+                class="progress"
+                min="0"
+                max="100"
+                step="0.1"
+                value="0"
+              />
+              <span id="timestamp" class="timestamp">00:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <footer class="text-center mt-5">
+      <small>&copy; STEPHEN KPOGO PROJECT 2020</small>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/vidscript.js"></script>
+  </body>
+</html>
